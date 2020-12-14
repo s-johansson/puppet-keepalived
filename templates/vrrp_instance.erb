@@ -116,6 +116,12 @@ vrrp_instance <%= @_name %> {
   }
   <%- end -%>
 
+  <%- if @track_file -%>
+  track_file {
+      <%= @track_file -%> weight <%= @track_file_weight -%>
+  }
+  
+  <%- end -%>
   <%- if @virtual_ipaddress -%>
   virtual_ipaddress {
   <%- if @virtual_ipaddress.class == Hash -%>

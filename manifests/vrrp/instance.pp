@@ -67,6 +67,12 @@
 # $track_script::          Define which script to run to track service states.
 #                          Default: undef.
 #
+# $track_file::            Define which file should be uses to track service states.
+#                          Default: undef.
+#
+# $track_file_weight::     Define which file should be uses to track service states.
+#                          Default: 1.
+#
 # $track_process::         Define which process trackers to run.
 #                          Default: undef.
 #
@@ -171,6 +177,8 @@ define keepalived::vrrp::instance (
   $auth_type                                                        = undef,
   $auth_pass                                                        = undef,
   $track_script                                                     = undef,
+  $track_file                                                       = undef,
+  $track_file_weight                                                = 1,
   Optional[Array[String[1]]] $track_process                         = undef,
   $track_interface                                                  = undef,
   $lvs_interface                                                    = undef,

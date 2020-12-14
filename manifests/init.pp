@@ -26,6 +26,7 @@ class keepalived (
 
   Hash $vrrp_instance      = {},
   Hash $vrrp_script        = {},
+  Hash $vrrp_track_file    = {},
   Hash $vrrp_track_process = {},
   Hash $vrrp_sync_group    = {},
   Hash $lvs_real_server    = {},

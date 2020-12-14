@@ -57,6 +57,7 @@ class keepalived::config {
       * => $attrs,
     }
   }
+  create_resource('keepalived::vrrp::track_file', $keepalived::vrrp_track_file)
   $keepalived::vrrp_track_process.each |String $key, Hash $attrs| {
     keepalived::vrrp::track_process { $key:
       * => $attrs,
